@@ -1,0 +1,397 @@
+:root {
+  --font-default: "Open Sans", sans-serif;
+  --font-primary: "Amatic SC", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+  --default-color: #212529;
+  --primary-hue: 0;
+  --primary-saturation: 84%;
+  --primary-lightness: 44%;
+  --color-primary: hsl(
+    var(--primary-hue),
+    var(--primary-saturation),
+    var(--primary-lightness)
+  );
+  --color-secondary: #37373f;
+  --color-tertiary: #7f7f90;
+  --light-hue: 0;
+  --light-saturation: 0%;
+  --light-lightness: 100%;
+  --color-light: hsl(
+    var(--light-hue),
+    var(--light-saturation),
+    var(--light-lightness)
+  );
+  --color-light-grey: #eee;
+}
+:root:has([name="changeTheme"]:checked) {
+  --primary-hue: 35;
+  --primary-saturation: 44%;
+  --primary-lightness: 72%;
+  --light-hue: 0;
+  --light-saturation: 0%;
+  --light-lightness: 9%;
+  --default-color: #fff;
+  --color-secondary: #fff;
+  --color-tertiary: #9f9f9f;
+  --color-light-grey: #252525;
+}
+
+@media screen and (min-width: 400px) {
+  /* GLOBAL CLASS */
+  .container {
+    padding: 1.5rem;
+  }
+  .title h2 {
+    font-size: 1.4rem;
+    color: var(--color-tertiary);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .title p {
+    font-family: var(--font-primary);
+    font-size: 5rem;
+  }
+
+  .nav__content ul {
+    width: 350px;
+  }
+
+  /* START HOME */
+  .home__caption h2 {
+    font-size: 6.5rem;
+  }
+  .home__caption p {
+    font-size: 1.5rem;
+  }
+  .book__watch {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem 0;
+  }
+  .book__watch .video {
+    padding: 0;
+  }
+  .btn {
+    margin: 0 !important;
+  }
+  /* END HOME */
+
+  /* START CHEFS SECTION */
+
+  .chef__caption h3 {
+    font-size: 1.872rem;
+  }
+  .chef__caption span {
+    font-size: 1.4rem;
+  }
+  .chef__caption p {
+    font-size: 1.5rem;
+  }
+  .chef__card .social__icon a {
+    font-size: 1.5rem;
+  }
+  /* END CHEFS SECTION */
+
+  /* start gallery section */
+  .item .layer h2 {
+    font-size: 2.4rem;
+  }
+  .item .layer p {
+    font-size: 1.6rem;
+  }
+  /* end gallery section */
+  /* start contact section */
+  contact__content .item .icon i {
+    font-size: 1.8rem;
+  }
+  .contact__content .item .details h3 {
+    font-size: 2rem;
+  }
+  .details :is(p, a) {
+    font-size: 1.6rem;
+  }
+  .contact form .btn {
+    font-size: 1.5rem;
+  }
+  /* end contact section */
+  .footer__content h3 {
+    font-size: 1.87rem;
+    margin-bottom: 1.3rem;
+  }
+  .Subscribe button {
+    font-size: 1.5rem;
+  }
+  .Social__media ul a {
+    font-size: 2.4rem;
+  }
+  .Subscribe p {
+    margin-bottom: 1.5rem;
+  }
+  .qk__links ul li a,
+  .touch ul li a,
+  .touch ul li span,
+  .Subscribe p,
+  .inf__website p {
+    font-size: 1.6rem;
+  }
+  .touch ul li i {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 540px;
+  }
+  .toggle .fa-xmark {
+    transform: none;
+  }
+  .nav__content ul {
+    transform: translateX(100px);
+  }
+
+  .sub__group {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .sub__group input {
+    width: 75%;
+  }
+  .sub__group button {
+    width: 25%;
+    padding: 0 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 720px;
+    padding: 0;
+  }
+  .home__content {
+    padding: 0;
+  }
+  .home__caption h2 {
+    width: 50%;
+    margin: auto;
+  }
+  /* start chef section */
+
+  .chef__content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .chef__card {
+    margin: 1.5rem;
+    width: calc(50% - 3rem);
+  }
+  /* end chef section */
+
+  /* start gallery section */
+  .photo__album {
+    columns: 2;
+    gap: 2rem;
+    /* display: flex;
+    flex-direction: column; */
+  }
+
+  /* end gallery section */
+
+  /* start contact section */
+  .content__caption {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .content__caption .item {
+    width: calc(50% - 1rem);
+    margin: 0;
+  }
+  /* end contact section */
+  .footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  .footer__content .inf__website,
+  .footer__content .touch {
+    order: 0;
+    width: calc(50% - 2rem);
+  }
+  .footer__content .Subscribe {
+    width: 100%;
+    order: 1;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+
+  /*        S T A R       H O M E     S E C T I O N          */
+  .home__content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .home .container {
+    margin-top: 8rem;
+  }
+  .home__content .home__caption {
+    order: -1;
+    text-align: start;
+  }
+  .home__caption h2 {
+    width: 100%;
+  }
+  .home__caption {
+    width: 40%;
+  }
+  .home__image {
+    width: 40%;
+  }
+  .book__watch {
+    justify-content: flex-start;
+  }
+  .book__watch .btn {
+    border-start-start-radius: 0px;
+  }
+  /*        E N D      H O M E      S E C T I O N          */
+
+  /* start chef section */
+
+  .chef__card {
+    width: calc(33.333% - 3rem);
+  }
+  .chef__card .social__icon a {
+    font-size: 1.7rem;
+  }
+  /* end chef section */
+
+  .photo__album {
+    columns: 3;
+    /* display: flex;
+    flex-direction: column; */
+  }
+  /* start contact section */
+  .contact form {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .contact form :is(input:nth-child(1), input:nth-child(2)) {
+    width: calc(50% - 0.5rem);
+  }
+  .contact form textarea {
+    width: 100% !important;
+  }
+  /* end contact section */
+
+  /* start footer area */
+  .sub__group input {
+    width: 85%;
+  }
+  .sub__group button {
+    width: 15%;
+    padding: 0 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1140px;
+    padding: 3rem 0;
+  }
+
+  /*        S T A R T      N A V B A R      S E C T I O N          */
+  .nav__content .toggle {
+    display: none;
+  }
+  .nav__content ul {
+    display: flex;
+
+    position: static;
+    height: auto;
+    border: 0;
+    width: fit-content;
+    padding: 0;
+    transform: none;
+    background-color: transparent;
+  }
+
+  .mode {
+    order: 1;
+  }
+  ul .nav__links {
+    padding: 1rem 0;
+    margin: 0 1.4rem;
+  }
+  .nav__content .mode {
+    margin: 0;
+  }
+
+  ul .nav__links::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+
+    transition: all 0.5s;
+  }
+  ul .nav__links:hover.nav__links::after,
+  ul .nav__links:active.nav__links::after {
+    right: 0;
+  }
+  body:not(:target) [href="#home"]::after {
+    right: 0;
+  }
+  body:not(:target) [href="#home"] {
+    color: var(--default-color);
+  }
+  body:has(:target) [href="#home"]{
+    color: var(--color-tertiary);
+  }
+  body:has(:target) [href="#home"]::after {
+    right: 100%;
+  }
+  body:has(.home:target) [href="#home"]::after,
+  body:has(.chefs:target) [href="#chefs"]::after,
+  body:has(.gallery:target) [href="#gallery"]::after,
+  body:has(.contact:target) [href="#contact"]::after {
+    right: 0;
+  }
+  body:has(.home:target) [href="#home"],
+  body:has(.chefs:target) [href="#chefs"],
+  body:has(.gallery:target) [href="#gallery"],
+  body:has(.contact:target) [href="#contact"] {
+    color: var(--default-color);
+  }
+  /*        E N D      N A V B A R      S E C T I O N          */
+
+  /* start footer section */
+  .footer__content {
+    gap: 3.5rem;
+    flex-wrap: nowrap;
+  }
+  .footer__content .item {
+    order: 0;
+    flex-grow: 0;
+  }
+  .Subscribe {
+    flex-grow: 1 !important;
+  }
+  .sub__group input {
+    width: 80%;
+  }
+  .sub__group button {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
